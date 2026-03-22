@@ -1,0 +1,18 @@
+{
+  "name": "k6-fundamentals",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "k6:run": "docker container run --rm -v $(pwd):/app -w /app grafana/k6 run",
+    "k6:run-all": "for f in *.test.js; do docker run --rm -v $(pwd):/app -w /app grafana/k6 run $f; done",
+    "k6:new": "docker container run --rm -v $(pwd):/app -w /app grafana/k6 new"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github-giovana:giovanaoliveira78/k6-fundamentals.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
